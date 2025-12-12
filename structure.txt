@@ -1,0 +1,514 @@
+Folder PATH listing for volume Win-11
+Volume serial number is 2A75-27F6
+C:.
+|   .gitignore
+|   all_files.py
+|   environment.yml
+|   fig4.png
+|   fig4_allnights_combined.png
+|   fig4_all_night.png
+|   fig4_all_nights.png
+|   fig4_from_logs.png
+|   fig4_reproduced.png
+|   fig4_saves.png
+|   fig5_heatmap.png
+|   log-4-25.txt
+|   log.txt
+|   poke_fig.png
+|   pwd.py
+|   pyproject.toml
+|   README.md
+|   structure.txt
+|   werewolf_fig.png
+|   
++---AgentGym
+|   +---docs
+|   |   +---api
+|   |   \---guides
+|   +---src
+|   |   +---components
+|   |   \---utils
+|   \---tests
++---camelgym
+|   |   call_config.py
+|   |   const.py
+|   |   context.py
+|   |   context_mixin.py
+|   |   environment.py
+|   |   gym.py
+|   |   llm.py
+|   |   logs.py
+|   |   repo_parser.py
+|   |   schema.py
+|   |   team.py
+|   |   _compat.py
+|   |   __init__.py
+|   |   
+|   +---actions
+|   |   |   action.py
+|   |   |   action_node.py
+|   |   |   action_outcls_registry.py
+|   |   |   action_output.py
+|   |   |   add_requirement.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---mi
+|   |   |   |   ask_review.py
+|   |   |   |   write_plan.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           ask_review.cpython-310.pyc
+|   |   |           write_plan.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           action.cpython-310.pyc
+|   |           action_node.cpython-310.pyc
+|   |           action_outcls_registry.cpython-310.pyc
+|   |           action_output.cpython-310.pyc
+|   |           add_requirement.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---configs
+|   |   |   browser_config.py
+|   |   |   llm_config.py
+|   |   |   mermaid_config.py
+|   |   |   redis_config.py
+|   |   |   s3_config.py
+|   |   |   search_config.py
+|   |   |   workspace_config.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           browser_config.cpython-310.pyc
+|   |           llm_config.cpython-310.pyc
+|   |           mermaid_config.cpython-310.pyc
+|   |           redis_config.cpython-310.pyc
+|   |           s3_config.cpython-310.pyc
+|   |           search_config.cpython-310.pyc
+|   |           workspace_config.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---document_store
+|   |   |   base_store.py
+|   |   |   chromadb_store.py
+|   |   |   document.py
+|   |   |   faiss_store.py
+|   |   |   lancedb_store.py
+|   |   |   milvus_store.py
+|   |   |   qdrant_store.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_store.cpython-310.pyc
+|   |           document.cpython-310.pyc
+|   |           faiss_store.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---environment
+|   |   |   base_env.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---api
+|   |   |   |   env_api.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           env_api.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   +---werewolf_env
+|   |   |   |   werewolf_env.py
+|   |   |   |   werewolf_ext_env.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           werewolf_env.cpython-310.pyc
+|   |   |           werewolf_ext_env.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           base_env.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---memory
+|   |   |   longterm_memory.py
+|   |   |   memory.py
+|   |   |   memory_storage.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           longterm_memory.cpython-310.pyc
+|   |           memory.cpython-310.pyc
+|   |           memory_storage.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---prompts
+|   |   |   tool_types.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---mi
+|   |   |   |   ml_action.py
+|   |   |   |   write_analysis_code.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           write_analysis_code.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           tool_types.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---provider
+|   |   |   base_chatbot.py
+|   |   |   base_gpt_api.py
+|   |   |   base_llm.py
+|   |   |   constant.py
+|   |   |   human_provider.py
+|   |   |   llm_provider_registry.py
+|   |   |   openai_api.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---postprocess
+|   |   |   |   base_postprocess_plugin.py
+|   |   |   |   llm_output_postprocess.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           base_postprocess_plugin.cpython-310.pyc
+|   |   |           llm_output_postprocess.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           base_llm.cpython-310.pyc
+|   |           constant.cpython-310.pyc
+|   |           human_provider.cpython-310.pyc
+|   |           llm_provider_registry.cpython-310.pyc
+|   |           openai_api.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---roles
+|   |   |   role.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           role.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---strategy
+|   |   |   base.py
+|   |   |   planner.py
+|   |   |   search_space.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           planner.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---tools
+|   |   |   tool_convert.py
+|   |   |   tool_data_type.py
+|   |   |   tool_registry.py
+|   |   |   tool_type.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---libs
+|   |   |   |   data_preprocess.py
+|   |   |   |   email_login.py
+|   |   |   |   feature_engineering.py
+|   |   |   |   gpt_v_generator.py
+|   |   |   |   sd_engine.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           data_preprocess.cpython-310.pyc
+|   |   |           email_login.cpython-310.pyc
+|   |   |           feature_engineering.cpython-310.pyc
+|   |   |           gpt_v_generator.cpython-310.pyc
+|   |   |           sd_engine.cpython-310.pyc
+|   |   |           __init__.cpython-310.pyc
+|   |   |           
+|   |   +---schemas
+|   |   |   +---data_preprocess
+|   |   |   |       FillMissingValue.yml
+|   |   |   |       LabelEncode.yml
+|   |   |   |       MaxAbsScale.yml
+|   |   |   |       MinMaxScale.yml
+|   |   |   |       OneHotEncode.yml
+|   |   |   |       OrdinalEncode.yml
+|   |   |   |       RobustScale.yml
+|   |   |   |       StandardScale.yml
+|   |   |   |       
+|   |   |   +---email_login
+|   |   |   |       email_login_imap.yml
+|   |   |   |       
+|   |   |   +---feature_engineering
+|   |   |   |       CatCount.yml
+|   |   |   |       CatCross.yml
+|   |   |   |       GeneralSelection.yml
+|   |   |   |       GroupStat.yml
+|   |   |   |       KFoldTargetMeanEncoder.yml
+|   |   |   |       PolynomialExpansion.yml
+|   |   |   |       SplitBins.yml
+|   |   |   |       TargetMeanEncoder.yml
+|   |   |   |       VarianceBasedSelection.yml
+|   |   |   |       
+|   |   |   +---image2webpage
+|   |   |   |       GPTvGenerator.yml
+|   |   |   |       
+|   |   |   \---stable_diffusion
+|   |   |           SDEngine.yml
+|   |   |           
+|   |   \---__pycache__
+|   |           tool_convert.cpython-310.pyc
+|   |           tool_data_type.cpython-310.pyc
+|   |           tool_registry.cpython-310.pyc
+|   |           tool_type.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---utils
+|   |   |   common.py
+|   |   |   cost_manager.py
+|   |   |   custom_decoder.py
+|   |   |   dependency_file.py
+|   |   |   di_graph_repository.py
+|   |   |   embedding.py
+|   |   |   exceptions.py
+|   |   |   file_repository.py
+|   |   |   git_repository.py
+|   |   |   graph_repository.py
+|   |   |   human_interaction.py
+|   |   |   json_to_markdown.py
+|   |   |   parse_docstring.py
+|   |   |   project_repo.py
+|   |   |   repair_llm_raw_output.py
+|   |   |   serialize.py
+|   |   |   singleton.py
+|   |   |   token_counter.py
+|   |   |   yaml_model.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           common.cpython-310.pyc
+|   |           cost_manager.cpython-310.pyc
+|   |           custom_decoder.cpython-310.pyc
+|   |           dependency_file.cpython-310.pyc
+|   |           exceptions.cpython-310.pyc
+|   |           file_repository.cpython-310.pyc
+|   |           git_repository.cpython-310.pyc
+|   |           human_interaction.cpython-310.pyc
+|   |           json_to_markdown.cpython-310.pyc
+|   |           parse_docstring.cpython-310.pyc
+|   |           project_repo.cpython-310.pyc
+|   |           repair_llm_raw_output.cpython-310.pyc
+|   |           serialize.cpython-310.pyc
+|   |           token_counter.cpython-310.pyc
+|   |           yaml_model.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   \---__pycache__
+|           call_config.cpython-310.pyc
+|           const.cpython-310.pyc
+|           context.cpython-310.pyc
+|           context_mixin.cpython-310.pyc
+|           llm.cpython-310.pyc
+|           logs.cpython-310.pyc
+|           schema.cpython-310.pyc
+|           team.cpython-310.pyc
+|           _compat.cpython-310.pyc
+|           __init__.cpython-310.pyc
+|           
++---logs
+|       20251203.txt
+|       20251204.txt
+|       20251205.txt
+|       20251206.txt
+|       20251207.txt
+|       20251208.txt
+|       llm_log.txt
+|       strategic_log.txt
+|       
++---pokemon
+|   |   fast_text_start.state
+|   |   has_pokedex.state
+|   |   has_pokedex_nballs.state
+|   |   init.state
+|   |   PokemonRed.gb
+|   |   windows-setup-guide.md
+|   |   __init__.py
+|   |   
+|   +---assets
+|   |       poke_map.gif
+|   |       pyboy.svg
+|   |       youtube.jpg
+|   |       
+|   +---baselines
+|   |   |   agent_enabled.txt
+|   |   |   delete_empty_imgs.txt
+|   |   |   memory_addresses.py
+|   |   |   red_gym_env.py
+|   |   |   render_all_needed_grids.py
+|   |   |   render_all_needed_grids.sh
+|   |   |   requirements-unfrozen.txt
+|   |   |   requirements.txt
+|   |   |   run_baseline_parallel.py
+|   |   |   run_baseline_parallel_fast.py
+|   |   |   run_llm.py
+|   |   |   run_pretrained_interactive.py
+|   |   |   run_recorded_actions.py
+|   |   |   saves_to_record.txt
+|   |   |   stream_agent_wrapper.py
+|   |   |   tensorboard_callback.py
+|   |   |   tile_vids_to_grid.py
+|   |   |   Visualizations_over_time.ipynb
+|   |   |   __init__.py
+|   |   |   
+|   |   +---grid_renders
+|   |   |   \---parallel_scripts
+|   |   |           parallel_grid_convert.sh
+|   |   |           
+|   |   +---ray_exp
+|   |   |       red_gym_env_ray.py
+|   |   |       requirements.txt
+|   |   |       train_ray.py
+|   |   |       
+|   |   +---session_2e397a7b
+|   |   |   |   curframe_861bdd7f.jpeg
+|   |   |   |   
+|   |   |   \---screenshots
+|   |   |           frame861bdd7f_r16.1775_2_healing.jpeg
+|   |   |           frame861bdd7f_r26.9571_2_neg_reward.jpeg
+|   |   |           frame861bdd7f_r43.0850_2_neg_reward.jpeg
+|   |   |           frame861bdd7f_r65.6506_2_neg_reward.jpeg
+|   |   |           frame861bdd7f_r71.1943_2_neg_reward.jpeg
+|   |   |           
+|   |   +---session_4d6295f3
+|   |   |       curframe_fce92e4f.jpeg
+|   |   |       
+|   |   +---session_4da05e87_main_good
+|   |   |       poke_439746560_steps.zip
+|   |   |       
+|   |   \---session_783096a6
+|   |       |   curframe_724cba6b.jpeg
+|   |       |   
+|   |       \---screenshots
+|   |               frame724cba6b_r101.1532_2_neg_reward.jpeg
+|   |               frame724cba6b_r16.1775_2_healing.jpeg
+|   |               frame724cba6b_r26.9571_2_neg_reward.jpeg
+|   |               frame724cba6b_r43.0850_2_neg_reward.jpeg
+|   |               frame724cba6b_r65.6506_2_neg_reward.jpeg
+|   |               frame724cba6b_r71.1943_2_neg_reward.jpeg
+|   |               frame724cba6b_r73.1654_2_neg_reward.jpeg
+|   |               frame724cba6b_r76.0187_2_neg_reward.jpeg
+|   |               frame724cba6b_r79.8961_2_healing.jpeg
+|   |               frame724cba6b_r83.4438_2_neg_reward.jpeg
+|   |               frame724cba6b_r86.4782_2_neg_reward.jpeg
+|   |               frame724cba6b_r87.4537_2_neg_reward.jpeg
+|   |               frame724cba6b_r89.3058_2_neg_reward.jpeg
+|   |               frame724cba6b_r95.4369_2_neg_reward.jpeg
+|   |               frame724cba6b_r98.3410_2_neg_reward.jpeg
+|   |               frame724cba6b_r99.0991_2_neg_reward.jpeg
+|   |               
+|   +---clip_experiment
+|   |   |   Interacting_with_CLIP_Pokemon.ipynb
+|   |   |   
+|   |   \---test_images
+|   |       \---things
+|   |               cat.jpg
+|   |               frog.jpeg
+|   |               
+|   +---llmagent
+|   |       environment.py
+|   |       function.py
+|   |       utils.py
+|   |       __init__.py
+|   |       
+|   \---visualization
+|       |   Agent_Visualization.ipynb
+|       |   BetterMapVis.ipynb
+|       |   BetterMapVis_script_version.py
+|       |   BetterMapVis_script_version_FLOW.py
+|       |   BetterMapVis_script_version_FLOW_edge.py
+|       |   BetterMapVis_script_version_PROG_COLOR.py
+|       |   Create_Video_Grids.ipynb
+|       |   MapWalkingVis.ipynb
+|       |   Map_Stitching.ipynb
+|       |   
+|       \---poke_map
+|               pokemap_full_rough.psd
+|               
++---werewolf_game
+|   |   debug.py
+|   |   fig4_all_night_eval.py
+|   |   fig4_one_night_eval.py
+|   |   fig5_eval.py
+|   |   schema.py
+|   |   start_game.py
+|   |   werewolf_game.py
+|   |   
+|   +---actions
+|   |   |   common_actions.py
+|   |   |   experience_operation.py
+|   |   |   guard_actions.py
+|   |   |   moderator_actions.py
+|   |   |   seer_actions.py
+|   |   |   werewolf_actions.py
+|   |   |   witch_actions.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           common_actions.cpython-310.pyc
+|   |           experience_operation.cpython-310.pyc
+|   |           guard_actions.cpython-310.pyc
+|   |           moderator_actions.cpython-310.pyc
+|   |           seer_actions.cpython-310.pyc
+|   |           werewolf_actions.cpython-310.pyc
+|   |           witch_actions.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---evals
+|   |       eval.py
+|   |       utils.py
+|   |       
+|   +---roles
+|   |   |   base_player.py
+|   |   |   guard.py
+|   |   |   human_player.py
+|   |   |   moderator.py
+|   |   |   seer.py
+|   |   |   villager.py
+|   |   |   werewolf.py
+|   |   |   witch.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---__pycache__
+|   |           base_player.cpython-310.pyc
+|   |           guard.cpython-310.pyc
+|   |           human_player.cpython-310.pyc
+|   |           moderator.cpython-310.pyc
+|   |           seer.cpython-310.pyc
+|   |           villager.cpython-310.pyc
+|   |           werewolf.cpython-310.pyc
+|   |           witch.cpython-310.pyc
+|   |           __init__.cpython-310.pyc
+|   |           
+|   +---tests
+|   |   \---actions
+|   |           test_experience_operation.py
+|   |           
+|   \---__pycache__
+|           schema.cpython-310.pyc
+|           start_game.cpython-310.pyc
+|           
++---workspace
+|   |   werewolf_transcript.txt
+|   |   
+|   \---storage
+|       \---team
+|               team.json
+|               
+\---__pycache__
+        pwd.cpython-310.pyc
+        

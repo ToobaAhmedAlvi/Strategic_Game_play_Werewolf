@@ -1,0 +1,136 @@
+{'headless': True, 'save_final_state': True, 'early_stop': False, 'action_freq': 24, 'init_state': '/Users/jundewu/Downloads/code/metagpt_newest/CamelGym/pokemon/has_pokedex_nballs.state', 'max_steps': 20480, 'print_rewards': True, 'save_video': False, 'fast_video': True, 'session_path': PosixPath('session_2024-05-12_15-42-24'), 'gb_path': '/Users/jundewu/Downloads/code/metagpt_newest/CamelGym/pokemon/PokemonRed.gb', 'debug': False, 'sim_frame_dist': 2000000.0, 'use_screen_explore': True, 'reward_scale': 4, 'extra_buttons': False, 'explore_weight': 3}
+Using cpu device
+Wrapping the env in a VecTransposeImage.
+Logging to session_2024-05-12_15-42-24/PPO_1
+DEBUG in reward_complete_compare: LLM return response: This initial state shows the character inside a room in Pokémon Red. The character is near the bottom part of the room, positioned between a table and a bookshelf, with an NPC (non-playable character) close by. The character’s orientation and positioning suggest they may be either interacting with the NPC or about to exit the conversation. The exit door of the room appears to be at the top of the screen to the right of the NPC.
+
+For the task of "Get out of the room," the relevant action is to guide the character towards the exit. Any future state that moves the character closer to the door or through it would be considered an improvement towards completing this task. If the character moves further from the door or remains in place for subsequent states, it would generally be less favorable in terms of task completion.
+step:      0 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  0.06 sum:  0.06step:     64 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  0.96 sum:  0.96step:    128 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68step:    192 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68step:    256 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68step:    320 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68step:    384 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68step:    448 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task:  0.00 explore:  1.68 sum:  1.68DEBUG in reward_complete_compare: LLM return response: In this frame, the character has moved significantly closer to the exit door of the room compared to the last frame. Initially, the character was positioned near the center of the room, further away from the door. Now, the character is right near the door, which indicates a state much more favorable to complete the task of getting out of the room.
+
+According to the provided scale, this improvement would be classified as "much better" because the player has turned into a state much more favorable to complete the task compared to the previous state. The action required to complete the task (exiting the room) is now straightforward and requires significantly fewer actions than before.
+
+Here is the result in the requested JSON format:
+```json
+{ "much better": 1.0 }
+```
+DEBUG in reward_complete_compare: LLM return rate much better
+step:    512 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  1.98 sum: 21.98step:    576 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.22 sum: 22.22step:    640 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.34 sum: 22.34step:    704 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.40 sum: 22.40step:    768 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.40 sum: 22.40step:    832 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.40 sum: 22.40step:    896 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.40 sum: 22.40step:    960 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 20.00 explore:  2.46 sum: 22.46DEBUG in reward_complete_compare: LLM return response: In this frame, the character has completed the task of exiting the room, as they are now located outside the room's door and clearly in the adjoining space or hallway. This change from the previous state, where the character was right at the exit but still arguably inside the room, to this state constitutes completion of the exit task.
+
+Since the task was to "Get out of the room," and the character has accomplished this by moving outside the door, we can conclude this task as completed.
+
+Here is the result in the requested JSON format:
+```json
+{ "completed": 1.0 }
+```
+DEBUG in reward_complete_compare: LLM return rate completed
+DEBUG in reward_complete_compare: LLM return response: The initial state shows the inside of a building, which appears to be the player character's house in the game Pokémon Red. You've completed the task of getting out of the room. The next task is to walk up out of the town. Please provide the next state so I can help assess progress towards completing that task.
+step:   1024 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  2.46 sum: 62.46step:   1088 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  2.52 sum: 62.52step:   1152 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  2.82 sum: 62.82step:   1216 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  2.82 sum: 62.82step:   1280 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  3.06 sum: 63.06step:   1344 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  3.66 sum: 63.66step:   1408 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  3.84 sum: 63.84step:   1472 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 60.00 explore:  4.02 sum: 64.02DEBUG in reward_complete_compare: LLM return response: Based on the provided image compared to the previous one, it appears that the player has moved from inside a building to an outdoor area, which is more aligned with the next task of walking up out of the town.
+
+Given this progression towards the goal, the rating would be:
+
+```json
+{ "better": 1.0 }
+```
+
+This means the player is closer to fulfilling the task with fewer actions needed compared to the starting point inside the house.
+DEBUG in reward_complete_compare: LLM return rate better
+step:   1536 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  4.80 sum: 68.80step:   1600 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  5.94 sum: 69.94step:   1664 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  6.00 sum: 70.00step:   1728 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  6.36 sum: 70.36step:   1792 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  6.90 sum: 70.90step:   1856 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  7.20 sum: 71.20step:   1920 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  8.46 sum: 72.46step:   1984 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 64.00 explore:  9.12 sum: 73.12DEBUG in reward_complete_compare: LLM return response: Based on the provided image compared to the previous one, it appears that the player has progressed further outdoors and is now near a house, indicating movement towards or around the town area. This change suggests that the player is continuing to proceed towards the next task of finding and entering the next town, although that specific task is not the current focus yet, the movement suggests progression rather than regression.
+
+Given this, the appropriate rating would be:
+
+```json
+{ "better": 1.0 }
+```
+
+This implies that the player's state is more favorable to walking up and out of the town, compared to the previous state, with fewer actions now necessary.
+DEBUG in reward_complete_compare: LLM return rate better
+step:   2048 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore:  9.30 sum: 77.30step:   2112 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore:  9.30 sum: 77.30step:   2176 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 10.26 sum: 78.26step:   2240 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 10.98 sum: 78.98step:   2304 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 12.18 sum: 80.18step:   2368 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 12.66 sum: 80.66step:   2432 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 13.02 sum: 81.02step:   2496 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 13.32 sum: 81.32-----------------------------
+| time/              |      |
+|    fps             | 45   |
+|    iterations      | 1    |
+|    time_elapsed    | 56   |
+|    total_timesteps | 2560 |
+-----------------------------
+DEBUG in reward_complete_compare: LLM return response: Based on the provided image comparison to the last frame, it appears the player is now positioned in an area between buildings and is still progressing through the town. The images indicate that the player is actively navigating through the town environment, which is essential to accomplishing the current task of walking out of this town.
+
+Given the slight movement and placement in a context-relevant environment yet not showing significant advancement towards the exit of the town, the following evaluation is provided:
+
+```json
+{ "nearly the same": 1.0 }
+```
+
+This rating suggests that, although the player is still moving in what seems to be the right direction and within the town, there isn't a substantial improvement over the last frame in terms of nearing the task completion. The complexity of actions needed to complete the task remains comparable.
+DEBUG in reward_complete_compare: LLM return rate nearly the same
+step:   2560 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 13.62 sum: 81.62step:   2624 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 14.10 sum: 82.10step:   2688 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 14.88 sum: 82.88step:   2752 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 14.88 sum: 82.88step:   2816 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 15.12 sum: 83.12step:   2880 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 15.42 sum: 83.42step:   2944 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 15.72 sum: 83.72step:   3008 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 68.00 explore: 15.78 sum: 83.78DEBUG in reward_complete_compare: LLM return response: Based on this latest image comparison to the previous frame, it can be observed that the player has proceeded further through the town and is now closer to the edge, presenting a boundary defined by a water body and a passage leading north, which implies a path likely leading out of the town.
+
+Considering the scenario where achieving the task entails moving out of the town, the player's current positioning near a probable exit point indicates substantial progress towards accomplishing the task. Therefore, the appropriate evaluation is:
+
+```json
+{ "much better": 1.0 }
+```
+
+This rating follows because the new frame significantly favors task completion by providing clarity on direction and fewer actions required to exit the town compared to the earlier state.
+DEBUG in reward_complete_compare: LLM return rate much better
+step:   3072 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.08 sum: 104.08step:   3136 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.20 sum: 104.20step:   3200 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.26 sum: 104.26step:   3264 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.26 sum: 104.26step:   3328 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.26 sum: 104.26step:   3392 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.50 sum: 104.50step:   3456 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.56 sum: 104.56step:   3520 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 88.00 explore: 16.56 sum: 104.56DEBUG in reward_complete_compare: LLM return response: In comparing this frame to the last one, the player appears to have moved away from the edge of the town (near water) and is now back within the town near a building. This relocation further from what seemed like a route leading out of the town indicates a regression in progress toward completing the task of walking out of the town.
+
+The rating should reflect that the player is further from completing the task due to moving away from a key exit area and back into the central part of the town. Therefore, the appropriate evaluation is:
+
+```json
+{ "worse": 1.0 }
+```
+
+This rating shows that the player needs more actions to complete the task relative to the previous frame, considering the increased distance and detour from the town's exit.
+DEBUG in reward_complete_compare: LLM return rate worse
+step:   3584 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.62 sum: 100.62step:   3648 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.62 sum: 100.62step:   3712 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.62 sum: 100.62step:   3776 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   3840 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   3904 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   3968 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   4032 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68DEBUG in reward_complete_compare: LLM return response: In this latest frame compared to the previous one, the player has moved to a different location within the town, near multiple buildings. This change does not represent a clear progression towards exiting the town, as it still depicts the player navigating within the town's boundaries without approaching an evident exit.
+
+The provided image does not suggest a direct regression but a lateral movement within the town, indicating that the player’s position concerning the completion of the task (walking up out of the town) has not significantly changed from the last frame. Therefore, the appropriate rating is:
+
+```json
+{ "nearly the same": 1.0 }
+```
+
+This rating is assigned because the player’s movement does not clearly bring them closer to or further from completing the task. The complexity and actions required to exit the town are unchanged, as the player remains in the urban environment without approaching an exit.
+DEBUG in reward_complete_compare: LLM return rate nearly the same
+step:   4096 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   4160 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.68 sum: 100.68step:   4224 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.86 sum: 100.86step:   4288 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4352 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4416 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4480 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4544 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98DEBUG in reward_complete_compare: LLM return response: In this frame compared to the previous one, the player appears to have moved slightly within the same general vicinity of the town depicted earlier. The current image shows the player alongside a different section of the building and closer to a wall, yet still within town limits.
+
+Given the minimal movement and the still centralized location within the town, this does not signify a clear progression towards leaving the town. There's no significant change in the position that would imply being closer or further from the task completion of walking out of the town.
+
+Thus, the appropriate rating would be:
+
+```json
+{ "nearly the same": 1.0 }
+```
+
+This rating suggests that the player remains in a similar state regarding task completion as before, without significant progress made towards exiting the town. The complexity and actions required to achieve the task are largely unchanged since the player continues to navigate within the town structure.
+DEBUG in reward_complete_compare: LLM return rate nearly the same
+step:   4608 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4672 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4736 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4800 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4864 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4928 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 16.98 sum: 100.98step:   4992 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 17.58 sum: 101.58step:   5056 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 84.00 explore: 17.82 sum: 101.82------------------------------------------
+| time/                   |              |
+|    fps                  | 40           |
+|    iterations           | 2            |
+|    time_elapsed         | 125          |
+|    total_timesteps      | 5120         |
+| train/                  |              |
+|    approx_kl            | 0.0051145256 |
+|    clip_fraction        | 0.0164       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.79        |
+|    explained_variance   | -0.214       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 0.0436       |
+|    n_updates            | 3            |
+|    policy_gradient_loss | -0.00274     |
+|    value_loss           | 0.0693       |
+------------------------------------------
+DEBUG in reward_complete_compare: LLM return response: In this frame compared to the last one, we observe that the player has moved significantly further up within the town. The environment indicates that the player might be near the northern limit of the town or at a leading out point due to the layout of fences and buildings that often indicate town boundaries in the game.
+
+This change of location shows progress towards and actual approach to leaving the town, considerably advancing from the previous positions deep within the town center. Therefore, the frame is a clear improvement over the last in terms of task completion, moving closer to fulfilling the task of walking out of the town. The essence of the transition suggests that essential actions required to complete the task are becoming simpler.
+
+Given this substantial progression, the appropriate rating would be:
+
+```json
+{ "much better": 1.0 }
+```
+
+This rating implies that the player has entered into a state much more favorable to completing the task than in the previous frame, where the player was navigating between buildings and areas that did not distinctly lead out of the town.
+DEBUG in reward_complete_compare: LLM return rate much better
+step:   5120 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.30 sum: 122.30step:   5184 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.36 sum: 122.36step:   5248 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.66 sum: 122.66step:   5312 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.78 sum: 122.78step:   5376 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.84 sum: 122.84step:   5440 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.90 sum: 122.90step:   5504 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.90 sum: 122.90step:   5568 event:  0.00 level:  0.00 heal:  0.00 op_lvl:  0.00 dead: -0.00 badge:  0.00 task: 104.00 explore: 18.90 sum: 122.90
